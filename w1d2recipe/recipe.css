@@ -1,0 +1,80 @@
+h1, h2 {
+    color: #A4A400;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    font-size: 18pt;
+    letter-spacing: 0.25em;
+}
+
+.heading {
+    background-color: #F0F0F0;
+}
+
+.main-heading {
+    font-weight: bold;
+    font-size: 22pt;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
+    background-size: auto;
+    background-position: center;
+    background-color: white;
+    background-attachment: fixed;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+}
+
+a {
+    color: #A4A400;
+}
+
+abbr {
+    text-decoration: underline;
+}
+
+.strike-out {
+    text-decoration: line-through;
+}
+
+.copyright {
+    font-family: "Courier New", monospace;
+    text-align: left;
+}
+
+.text-wrapper {
+    float: right;
+}
+
+.validator {
+    text-align: right;
+}
+
+.pipe {
+    float: right;
+}
+
+.direction {
+    font-weight: bold;
+}
+
+.comment {
+    background-color: #FFFFA8;
+    margin-left: 3rem;
+    font-style: italic;
+}
+
+.no-line-space {
+    margin: 0;
+    padding: 0;
+}
+
+.description, .recipe-img {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif");
+}
