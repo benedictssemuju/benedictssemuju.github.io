@@ -14,5 +14,10 @@ p{
 }
 
 body{
-    background-color:burlywood ;
+    background-color:rgb(222, 135, 168) ;
 }
+a:link {text-decoration: none; }
+a:hover { text-decoration: underline; }
+p:first-letter {
+    font-size: large;
+  }
