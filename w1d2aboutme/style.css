@@ -18,6 +18,6 @@ body{
 }
 a:link {text-decoration: none; }
 a:hover { text-decoration: underline; }
-/* p:first-letter {
+p:first-letter {
     font-size: large;
-  } */
+  }
