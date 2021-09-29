@@ -1,0 +1,141 @@
+body {
+    background-image: url("img/background.png");
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 8pt;
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    text-align: center;
+    text-shadow: 3px 3px #999999;
+}
+
+.heading h1 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.content {
+    width: 800px;
+    margin: 0 auto;
+    border: 4px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.banner {
+    background-image: url("img/bannerbg.png");
+}
+
+.content {
+    position: relative;
+}
+
+.rating {
+    background-image: url("img/rbg.png");
+    font-weight: bold;
+    font-size: 48pt;
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar {
+    background-color: #A2B964;
+    width: 250px;
+    font-family: Arial, sans-serif;
+    padding-bottom: 2px;
+    position: absolute;
+    left: 550px;
+    height: 1005px;
+}
+
+.side-bar dl {
+    padding-left: 10pt;
+    padding-right: 10pt;
+    margin-bottom: 0;
+}
+
+.side-bar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 10pt;
+}
+
+.review-section {
+    margin-right: 250px;
+}
+
+.grid-container {
+    position: relative;
+    padding: 5px;
+    width: 550px;
+}
+
+.review {
+    font-weight: bold;
+    background-color: #E8DC9B;
+    padding: 8px;
+    border: 2px gray solid;
+    border-radius: 10px;
+}
+
+.review img {
+    padding-right: 5px;
+}
+
+
+.review-col-1, .review-col-2 {
+    width: 47%;
+    height: 900px;
+}
+
+.paging {
+    background-color: #A2B964;
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.paging p {
+    margin: 0;
+}
+
+.review-col-2 {
+    position: absolute;
+    left: 49%;
+    top: 5px;
+}
+
+.review-col-1 {
+    padding-left: 3px;
+}
+
+.review img, .author img {
+    float: left;
+}
+
+.review:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.author {
+    margin-bottom: 20pt;
+}
+
+.validator {
+    position: absolute;
+    right: 0;
+    top: 1105px;
+}
