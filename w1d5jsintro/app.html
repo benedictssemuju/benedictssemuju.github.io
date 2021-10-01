@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+/* runs test to see if expected argument is === to value returned by function2test argument */
+function myFunctionTest(expected, found) {
+    let predicate;
+    if(Array.isArray(found)) predicate = arraysAreEqual(expected, found);
+    else predicate = expected ===found;
+    return predicate ? "TEST SUCCEEDED" : "TEST FAILED. Expected "+ expected +" found " + found;
+
+}
+
+const arraysAreEqual = (a, b) =>
+    a.length === b.length && a.every((v, i) => v === b[i]);
+
+// max function
+function max(a, b){
+    return a>b ? a : b;
+}
+console.log("Expected output of max(30,40) is 40 " + myFunctionTest(40,max(30,40)));
+
+//max of three
+function maxOfThree(a,b,c){
+    return max(max(a,b),c);
+}
+console.log("Expected output of max(50,80,40) is 80 " + myFunctionTest(80,max(max(50,80),40)));
+
+/*funtion isVowel*/
+function isVowel(s){
+    return ["a","e","i","o","u"].includes(s.toLowerCase());
+}
+console.log("Expected output of isVowel(a) is true " + myFunctionTest(true, isVowel("a")));
+
+/*Sum*/
+function sum(arr){
+    return arr.reduce((accum,elem)=> accum + elem,0);  
+}
+console.log("Expected output of sum([10,20,30]) is 50 " + myFunctionTest(60, sum([10,20,30])));
+
+/*multiply*/
+function multiply(arr){
+    return arr.reduce((accum,elem)=> accum * elem,1);  
+}
+console.log("Expected output of multiply([10,20,30]) is 6000 " + myFunctionTest(6000, multiply([10,20,30])));
+
+/*reverse*/
+function reverse(s){
+    return s.split("").reverse().join("");
+}
+console.log("Expected output of reverse(tunnel) is lennut " + myFunctionTest("lennut", reverse("tunnel")));
+
+/*longest word*/
+function  findLongestWord(words){
+    return words.reduce((longestlength,word)=>{
+        return longestlength > word.length ? longestlength : word.length;
+    },0);
+}
+console.log("Expected output of findLongestWord([ben,immacualate,moses]) is 10 " + 
+            myFunctionTest(10, findLongestWord(["ben","immaculate","moses"])));
+
+/*filterLongWords()*/
+function filterLongWords(words, number){
+    return words.filter(word=>word.length>number);
+}
+console.log("Expected output of filterLongWords([ben,immacualate,moses],4) is 10 " + 
+            myFunctionTest(["immaculate","moses"], filterLongWords(["ben","immaculate","moses"],4)));
+
+/*js fiddle*/
+  
+  </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
