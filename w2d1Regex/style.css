@@ -1,0 +1,51 @@
+.links {
+    width: 250px;
+    margin-left: 55px;
+}
+
+.custom-link, .custom-link:link {
+    color: #744abb;
+    text-decoration: none;
+}
+
+.custom-link {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.custom-link:hover {
+    color: #f3b609;
+    text-decoration: underline;
+}
+
+.my-valid-feedback {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #28a745 !important;
+}
+
+.my-invalid-feedback {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.is-valid {
+    border-color: #28a745;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .my-navbar-text,
+.my-nav-link {
+    color: white !important;
+}
+
+.navbar-custom {
+    background-color: #3bbcfa;
+}
