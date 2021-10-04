@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <title>Week2day1</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <link href= "style.css" rel="stylesheet" type = "text/css">
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+    let expect = chai.expect;
+  </script>
+  <script src="app.js"></script>
+  <script src="tests.js"></script>
+</head>
+
+<body>
+
+  <!-- the script with tests (describe, it...) -->
+  <script src="tests.js"></script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
