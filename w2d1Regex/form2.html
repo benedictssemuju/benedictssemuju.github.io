@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W2D1 Quiz | Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">MUM Golden Dome Market : : : SRM System <span
+            class="px-3 border-right border-white"></span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link my-nav-link mr-2" href="#">Products <span
+                        class="px-3 border-right border-white"></span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link my-nav-link mr-2" href="#">Suppliers</a>
+            </li>
+        </ul>
+        <a class="nav-link my-nav-link" href="../index.html"><i class="fa fa-home"></i> Home</a>
+        <div class="form-inline my-2 mr-3 my-navbar-text">Hello!</div>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn my-navbar-button my-2 my-sm-0" type="submit">Sign out</button>
+        </form>
+    </div>
+</nav>
+<div class="container">
+    <form class="my-4">
+        <h2 class="text-muted">New product Form</h2>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="product-number">Product Number</label>
+                <input type="text" class="form-control" id="product-number">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="stock-qty">Quantity in Stock</label>
+                <input type="number" class="form-control" id="stock-qty" placeholder="0">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="supplier">Supplier:</label>
+                <select id="supplier" class="form-control">
+                    <option selected disabled>Select a supplier...</option>
+                    <option>Supplier 1</option>
+                    <option>Supplier 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="unit-price">Unit price</label>
+                <input type="number" class="form-control" id="unit-price" placeholder="0.0">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="date-supplied">Date supplied</label>
+                <input type="date" class="form-control" id="date-supplied" placeholder="yyyy-mm-dd"
+                       aria-describedby="dateHelp">
+                <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
+            </div>
+        </div>
+        <div class="text-right my-3">
+            <button type="reset" class="btn btn-outline-dark mx-2">Reset</button>
+            <button type="button" class="btn btn-outline-danger mx-2">Cancel</button>
+            <button type="submit" class="btn btn-outline-primary">Add Product</button>
+        </div>
+    </form>
+</div>
+</body>
+
+</html>
