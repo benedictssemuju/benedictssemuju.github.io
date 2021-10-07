@@ -10,11 +10,11 @@ describe("Array BubbleSort", () => {
         assert.deepEqual([-2, 0, 1, 3, 4, 6]),([6, 4, 0, 3, -2, 1].bubbleSort());
     });
 });
-describe("Inheritance", () => {
-    it("Teacher object derived from the Person class", () => {
-        const me = new Teacher();
-        me.initialize("Anna Bella", 26);
-        expect(me instanceof Person).to.be.true;
-        expect("Anna Bella, 26 years old.").to.eql(me.describe());
-    });
-});
+// describe("Inheritance", () => {
+//     it("Teacher object derived from the Person class", () => {
+//         const me = new Teacher();
+//         me.initialize("Anna Bella", 26);
+//         expect(me instanceof Person).to.be.true;
+//         expect("Anna Bella, 26 years old.").to.eql(me.describe());
+//     });
+// });
