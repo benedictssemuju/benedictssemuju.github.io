@@ -1,14 +1,19 @@
 // Exercise 1:
 String.prototype.filter = function (...bannedWords) {
     let str = this;
-    bannedWords.forEach(word => {
-        const index = str.indexOf(word);
-        if (index >= 0) {
-            // str = str.replace(word, "");
-            const regex = new RegExp(word + "\\s?");
-            str = str.replace(regex, "");
+    bannedWords.forEach(word=>{
+        if(str.includes("word")){
+            str=str.replace(word,"");
         }
     });
+    // bannedWords.forEach(word => {
+    //     const index = str.indexOf(word);
+    //     if (index >= 0) {
+    //         // str = str.replace(word, "");
+    //         const regex = new RegExp(word + "\\s?");
+    //         str = str.replace(regex, "");
+    //     }
+    // });
     return str;
 }
 
