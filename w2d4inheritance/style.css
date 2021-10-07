@@ -1,0 +1,23 @@
+.links {
+    width: 250px;
+    margin-left: 55px;
+}
+
+.custom-link, .custom-link:link {
+    color: #744abb;
+    text-decoration: none;
+}
+
+.custom-link {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.custom-link:hover {
+    color: #f3b609;
+    text-decoration: underline;
+}
+
+.links {
+    margin-top: 50px;
+}
