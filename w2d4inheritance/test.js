@@ -2,7 +2,7 @@
 describe("String Filter", () => {
     it("Filter takes an array of banned words and returns " +
         "the string after removing all the banned words", () => {
-        assert.equal("This house is not nice!".filter("not"), "This house is nice!");
+        assert.equal("This house is not nice!".filter(["not"]), "This house is nice!");
     });
 });
 describe("Array BubbleSort", () => {
