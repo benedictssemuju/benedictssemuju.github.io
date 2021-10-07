@@ -6,14 +6,6 @@ String.prototype.filter = function (...bannedWords) {
             str=str.replace(word,"");
         }
     });
-    // bannedWords.forEach(word => {
-    //     const index = str.indexOf(word);
-    //     if (index >= 0) {
-    //         // str = str.replace(word, "");
-    //         const regex = new RegExp(word + "\\s?");
-    //         str = str.replace(regex, "");
-    //     }
-    // });
     return str;
 }
 
@@ -58,5 +50,5 @@ Teacher.prototype.teach = function (subject) {
 }
 
 const me = new Teacher();
-me.initialize("Albert Einstein", 58);
+me.initialize("Anna Bella", 26);
 me.teach("WAP");
