@@ -4,7 +4,7 @@ class Bank {
     constructor() {
         this._accounts = [];
     }
-    getAccounta(){
+    getAccount(){
         return this._accounts;
     }
     addAccount(){
