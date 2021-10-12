@@ -20,6 +20,6 @@ class Bank {
         this._accounts = this._accounts.filter(x=>x.getNumber()!==number)
     }
     accountReport(){
-        this._accounts.forEach(x=>console.log(x.toString()));
+        this._accounts.forEach(x=>console.log(x.endOfMonth()));
     }
 }
