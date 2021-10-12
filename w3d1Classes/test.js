@@ -117,27 +117,5 @@ describe('Bank Tests', () => {
     });
 
 
-    describe('Account Report', () => {
-        it('should generate an account report for all bank accounts within the bank', () => {
-            bank.addSavingsAccount(5);
-            bank.addSavingsAccount(10);
-            bank.addCheckingAccount(300);
 
-            expect(bank.accountReport()).to.eql("\nSavings Account 5: balance 0" +
-                "\nSavings Account 6: balance 0" +
-                "\nChecking Account 7: balance 0");
-        });
-    });
-
-    describe('End Of month test', () => {
-        it('should generate and endOfMonth Status by Performing needed actions at the end of the month', () => {
-            bank.addSavingsAccount(5);
-            bank.addSavingsAccount(10);
-            bank.addCheckingAccount(300);
-            console.log(bank.endOfMonth());
-            expect(bank.endOfMonth()).to.eql("\nInterest added SavingsAccount 8: balance: 0 interest: 5" +
-                "\nInterest added SavingsAccount 9: balance: 0 interest: 10" +
-                "\nNo action for Checking account");
-        });
-    });
 });
