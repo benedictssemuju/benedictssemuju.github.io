@@ -17,9 +17,9 @@ class Bank {
         this._accounts.push(new CheckingAccount(Bank.nextNumber++, overdraft));
     }
     closeAccount(number){
-        this._accounts = this._accounts.filter(x=>x. getNumber()!==number)
+        this._accounts = this._accounts.filter(x=>x.getNumber()!==number)
     }
     accountReport(){
-        this._accounts.forEach(x=>x.toString());
+        this._accounts.forEach(x=>console.log(x.toString()));
     }
 }
