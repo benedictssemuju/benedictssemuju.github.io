@@ -18,7 +18,7 @@ $(function () {
                 "height": this.height + "px"
             });
 
-            $('body').append($("<div>", {class: "settings"}) // append settings
+            $('body').append($("<div>", {class: "settings"}) 
                 .append($('<div>', {class: 'setting'})
                     .append($('<label>', {for: 'width', text: 'Width:'}))
                     .append($('<input>', {type: 'number', id: 'width', name: 'width', value: 50}))
@@ -38,7 +38,7 @@ $(function () {
                 .append($('<button>', {class: 'button', id: 'start', text: 'Start'}))
                 .append($('<button>', {class: 'button', id: 'stop', disabled: true, text: 'Stop'}))
                 .append($('<button>', {class: 'button', id: 'reset', text: 'Reset'}))
-            ).append(this.element); // append canvas
+            ).append(this.element); 
         },
         circles: []
     };
@@ -50,13 +50,7 @@ $(function () {
      * Encapsulates the jQuery object for the circle and provides extra methods and functionality
      */
     class Circle {
-        /**
-         * Constructor for creating a new Account object
-         *
-         * @param {string} color the circle's color
-         * @param {number} dx the small ∆x to move the circle in the x-plane
-         * @param {number} dy the small ∆y to move the circle in the y-plane
-         */
+      
         constructor(color, dx, dy) {
             this.dx = dx;
             this.dy = dy;
@@ -69,7 +63,6 @@ $(function () {
                 "height": this.height + 'px'
             }).addClass("circle");
 
-            // add listeners to this.element
             this.element.click(() => {
                 this.removeCircle();
             });
@@ -97,12 +90,7 @@ $(function () {
         }
 
 
-        /**
-         * Method change the size of the Circle
-         *
-         * @param {number} size circle size (for both height and width)
-         * @returns {undefined}
-         */
+      
         changeSize(size) {
             this.height = size;
             this.width = size;
@@ -112,13 +100,6 @@ $(function () {
             })
         }
 
-        /**
-         * Method to move circle to an absolute position
-         *
-         * @param {number} x the absolute position offset in x-plane
-         * @param {number} y the absolute position offset in y-plane
-         * @returns {undefined}
-         */
         moveCircleTo(x, y) {
             this.element.css({
                 "left": x + 'px',
@@ -126,13 +107,7 @@ $(function () {
             });
         }
 
-        /**
-         * Method to change the direction of the circle within the canvas
-         *
-         * @param {number} x the absolute position offset in x-plane
-         * @param {number} y the absolute position offset in y-plane
-         * @returns {undefined}
-         */
+
         changeDirectionIfNecessary(x, y) {
             if (x < 0 || x > canvas.width - this.width) {
                 this.dx = -this.dx;
@@ -142,13 +117,6 @@ $(function () {
             }
         }
 
-        /**
-         * Method to runAnimation the circle
-         *
-         * @param {number=} x the absolute position offset in x-plane. Default is this.position.x
-         * @param {number=} y the absolute position offset in y-plane. Default is this.position.y
-         * @returns {undefined}
-         */
         runAnimation(x = this.position.x, y = this.position.y) {
             this.position.x = x;
             this.position.y = y;
@@ -160,34 +128,22 @@ $(function () {
             }, 100));
         }
 
-        /**
-         * Method to remove Circle from the DOM
-         *
-         * @returns {undefined}
-         */
         removeCircle() {
             this.element.remove();
-            // Remove element from circles collection in canvas object
-            // TODO: Improve this (may be have this method in the canvas)!
             canvas.circles = canvas.circles.filter(circle => circle !== this);
         }
 
-        /**
-         * Getter for the 'size' of the Circle
-         *
-         * @returns {number} the height or width
-         */
         getSize() {
             return this.height;
         }
     }
 
 
-    // ------------- INITIALIZATION ----------------
+ 
     canvas.initialize();
     createCircles(NUMBER_OF_CIRCLES);
 
-    /* ----------- EVENT LISTENERS ----------- */
+
     $("#width").change(function () {
         const size = parseInt($(this).val());
         canvas.circles.forEach((circle) => {
@@ -204,14 +160,7 @@ $(function () {
         GROWTH_INTERVAL_MS = parseInt($(this).val());
     });
 
-    /**
-     * Function to create the circles based on the NUMBER_OF_CIRCLES
-     *
-     * It removes all existing circles before creating new ones.
-     *
-     * @param {number} numberOfCircles the number of Circles to be inserted into the DOM
-     * @returns {undefined}
-     */
+  
     function createCircles(numberOfCircles) {
         // remove old circles from UI
         canvas.circles.forEach(c => {
