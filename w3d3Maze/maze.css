@@ -53,9 +53,9 @@ div.youlose {
     background-color: #ff8888;
 }
 
-/* div.youwin {
+div.youwin {
     background-color: #88ff88;
-} */
+}
 
 /*
 Hack hack hack; these are CSS "sibling selectors" for selecting
