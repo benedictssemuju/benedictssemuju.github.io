@@ -7,7 +7,7 @@ const readline = require('readline').createInterface({
 //Number 1
 readline.question('What is your name? ', name => {
  console.log(`Welcome ${name}`);
-readline.question('What is your age? ', age => {
+readline.q.uestion('What is your age? ', age => {
     if(age<16){
         console.log("You’re not allowed to drive in Iowa");
     }else{ console.log("You’re allowed to get a drivers license in Iowa");}
@@ -24,7 +24,7 @@ function sumOfNums(){
             if(response.toLowerCase==="stop"){
                 console.log(`Sum: ${sum}`);
             }else{
-                sum+=response;
+                sum+=parsInt(response);
                 getNumber();
             }
             
@@ -32,3 +32,4 @@ function sumOfNums(){
     } 
     getNumber();
 };
+
