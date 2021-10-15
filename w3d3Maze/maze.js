@@ -1,11 +1,11 @@
 $(function () {
     "use strict";
     $('#start').click(function () {
-        const $walls = $("#maze .boundary");
+        const $walls = $("#maze.boundary");
         const $status = $('#status');
         const $maze = $('#maze');
         $walls.removeClass('youlose youwin'); // reset walls
-        $status.text("Maze has begun! Find your way through");
+        $status.text("Maze begin! Find your way through");
 
         $walls.mouseenter(function () {
             $walls.addClass('youlose');
